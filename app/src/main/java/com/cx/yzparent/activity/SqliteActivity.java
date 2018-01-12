@@ -28,6 +28,10 @@ public class SqliteActivity extends BaseActivity {
 
     @Override
     protected void initLayout() {
+        doInternet();
+    }
+
+    private void doInternet() {
         UrlUtils api = RetrofitHelper.createApi(UrlUtils.class);
         api.getBannerData("1", "appIndexBanner")
                 .compose(RxJavaHelper.<InformationListBeans>observeOnMainThread())
@@ -51,20 +55,8 @@ public class SqliteActivity extends BaseActivity {
                     }
                 });
     }
-
-    /**
-     * 获取下拉刷新和上拉加载的url
-     *
-     * @param page 页数
-     * @return url
-     */
-    private String getRefreshAndMoreUrl(int page) {
-        String url = "&page=" + page + "&rows=10";
-
-        return "https://api.yzcam.com/educate/ar/queryAllInformations?" + url;
-    }
-
     @OnClick(R.id.reload)
     public void onClick() {
+        doInternet();
     }
 }
