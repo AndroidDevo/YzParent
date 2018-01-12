@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.cx.yzparent">
+
+    <!-- 网络访问以及网络状态 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 相机 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!-- 内存权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 判断sd卡是否有容量 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- 打电话 -->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <!-- 缓存清理 -->
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <!-- 短信验证码所需权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/temp_head"
+        android:label="@string/app_name"
+        android:name=".utils.LaunchApplication"
+        android:roundIcon="@mipmap/temp_head"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.login.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.MainActivity"/>
+        <activity android:name=".activity.SqliteActivity">
+        </activity>
+    </application>
+
+</manifest>

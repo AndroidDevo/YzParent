@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">YzParent</string>
+    <string name="app_name_en">GankEssence</string>
+
+    <string name="err_default">数据加载异常</string>
+    <string name="err_network">网络好像不给力哦！</string>
+    <string name="err_default_sorry">抱歉,系统发生未知异常</string>
+</resources>
