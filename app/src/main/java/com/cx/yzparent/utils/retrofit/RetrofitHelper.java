@@ -54,7 +54,7 @@ public class RetrofitHelper {
                 if (null == retrofitInstance) { // 双重检验锁,仅第一次调用时实例化
                     retrofitInstance = new Retrofit.Builder()
                             // baseUrl总是以/结束，@URL不要以/开头
-                            .baseUrl("https://api.yzcam.com/educate/")
+                            .baseUrl("https://www.baidu.com/")
                             // 使用OkHttp Client
                             .client(buildOKHttpClient())
                             // 集成RxJava处理
